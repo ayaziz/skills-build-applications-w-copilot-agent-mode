@@ -1,4 +1,4 @@
-import { connectDatabase, mongoUri } from '../config/database.js';
+import { connectDatabase, mongoUri, mongoose } from '../config/database.js';
 import User from '../models/user.model.js';
 import Team from '../models/team.model.js';
 import Activity from '../models/activity.model.js';
