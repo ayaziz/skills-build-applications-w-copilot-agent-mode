@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f6f8fb;
+  color: #111;
+}
+
+.app-root {
+  padding: 2rem;
+  text-align: center;
+}
