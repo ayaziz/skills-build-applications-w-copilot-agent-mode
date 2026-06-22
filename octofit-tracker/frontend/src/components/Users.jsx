@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
-import { apiBaseUrl } from '../App';
+
+const usersApiUrl = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users`
+  : 'http://localhost:8000/api/users';
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -8,7 +11,7 @@ export default function Users() {
   useEffect(() => {
     async function loadUsers() {
       try {
-        const response = await fetch(`${apiBaseUrl}/users`);
+        const response = await fetch(usersApiUrl);
         const data = await response.json();
 
         if (Array.isArray(data) && data.length > 0) {
